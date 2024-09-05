@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping Project</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Scraped Data</h1>
+        
+        <div class="section">
+            <h2>YouTube Trending Videos</h2>
+            {% if youtube_data %}
+                <ul>
+                    {% for video in youtube_data %}
+                        <li>{{ video }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No YouTube videos found for the query.</p>
+            {% endif %}
+        </div>
+        
+        <div class="section">
+            <h2>Amazon Products</h2>
+            {% if amazon_data %}
+                <ul>
+                    {% for product in amazon_data %}
+                        <li>{{ product }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No Amazon products found for the query.</p>
+            {% endif %}
+        </div>
+        
+    </div>
+</body>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff512f,#dd2476);
+   
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background: linear-gradient(to right, #7f00ff,#e100ff); */
+    background: linear-gradient(to right, #ff9966,#ff5e62);
+    /* background-color: rgb(232, 229, 86); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+ul li:hover {
+    background-color: #ddd;
+}
+
+</style>
+
+</html>
+
