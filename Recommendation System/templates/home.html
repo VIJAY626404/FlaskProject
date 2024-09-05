@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation System</title>
+</head>
+<body>
+    <div>
+        <h1>Recommendation System</h1>
+        <form method="POST" action="/">
+            <label for="category">Choose a category:</label>
+            <select id="category" name="category">
+                <option value="technology">Technology</option>
+                <option value="sports">Sports</option>
+                <option value="food">Food</option>
+            </select>
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        {% if recommended_items %}
+            <h2>Recommended Content:</h2>
+            <ul>
+                {% for item in recommended_items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    <footer>
+        <h3>&copy; 2024 vijaykumarshah. All rights reserved</h3>
+    </footer>
+    <style>
+        body {
+            background-color:burlywood;
+
+        }
+         footer {
+            font: size 100px;
+            color:azure;
+            margin-top:43em;
+            padding: 1em;
+            text-align:center;
+            background: linear-gradient(to bottom, #8456af, #2c3e50);
+         }
+    </style>
+</body>
+</html>
+
