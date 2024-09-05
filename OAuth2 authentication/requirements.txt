@@ -1,0 +1,5 @@
+ Flask 
+ Flask-OAuthlib 
+ Flask-Login
+ Flask-Dance
+ werkzeug-0.16.1
